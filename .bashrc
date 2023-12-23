@@ -1,4 +1,16 @@
-export PS1="\W\$(__git_ps1) $ "
-# PS1="\e[40;1;36m[\u@\h \W]$ "
-PS1='${debian_chroot:+($debian_chroot)}\033[1;33;1;33m\@:\033[1;33;1;36m[\h\033[1;36m@\033[1;36m\u]\033[1;35m\w\[\033[35m\$ \033[1;37m'
+yellow=$(tput setaf 11)
+blue=$(tput setaf 14 bold)
+grey=$(tput setaf 7)
+maroon=$(tput setaf 9)
+green=$(tput setaf 82)
+bold=$(tput setaf bold)
+reset_p=$(tput sgr0)
 
+PS1="\[${bold}\]"
+PS1+="\[${blue}\]\u";        # blue user name
+PS1+="\[${grey}\]@";          # grey '@'
+PS1+="\[${maroon}\]\h ";       # maroon hostname
+PS1+="\[${grey}\]";          # grey ":"
+PS1+="\[${yellow}\] кит пердит ";    # prompt with the default color
+PS1+="🐋💨:"
+export PS1;
